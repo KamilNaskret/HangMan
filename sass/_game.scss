@@ -1,0 +1,144 @@
+.game{
+    min-height:100vh;
+    background-color: darkgray;
+    position:relative;
+    &::after{
+        content:'';
+        position:absolute;
+        right:0;
+        bottom:0;
+        width:0;
+        height:0;
+        border-bottom:300px solid rgb(74, 101, 206);
+        border-left:300px solid transparent;
+    }
+    &__results{
+        height:70vh;
+        display:flex;
+    }
+    &__hangman{
+        width:40%;
+        position:relative;
+        .hangman__bal{
+            position:absolute;
+            top:5%;
+            left:0;
+            width:200px;
+            height:10px;
+            background-color: rgb(74, 101, 206);;
+            border:1px solid white;
+        }
+        .hangman__head{
+            position:absolute;
+            z-index:2;
+            top:calc(5% + 10px);
+            left:150px;
+            width:50px;
+            height:50px;
+            background-image:url("../../head.png");
+            background-size: cover;
+            border-radius:50%;
+        }
+        .hangman__body{
+            position:absolute;
+            z-index:1;
+            top:calc(5% + 50px);
+            left:150px;
+            width:50px;
+            height:100px;
+            background-color: rgb(74, 101, 206);;
+            border:1px solid white;
+        }
+        .hangman__leftarm{
+            position:absolute;
+            left:140px;
+            top:13%;
+            width:10px;
+            height:50px;
+            background-color: rgb(74, 101, 206);;
+            transform:rotate(45deg);
+            border:1px solid white;
+
+        }
+        .hangman__rightarm{
+            position:absolute;
+            left:200px;
+            top:13%;
+            width:10px;
+            height:50px;
+            background-color: rgb(74, 101, 206);;
+            transform:rotate(-45deg);
+            border:1px solid white;
+
+        }
+        .hangman__leftleg{
+            position:absolute;
+            left:150px;
+            top:35%;
+            width:10px;
+            height:50px;
+            background-color: rgb(74, 101, 206);;
+            border:1px solid white;
+
+        }
+        .hangman__rightleg{
+            position:absolute;
+            left:190px;
+            top:35%;
+            width:10px;
+            height:50px;
+            background-color: rgb(74, 101, 206);;
+            border:1px solid white;
+
+        }
+    }
+    &__missed{
+        flex-grow:1;
+        display:flex;
+        flex-direction: column;
+        &-letters{
+            height:30%;
+            font-size:2rem;
+            span{
+                font-size:2rem;
+                color:rgb(74, 101, 206);
+            }
+        }
+    }
+    &__letters{
+        height:30vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        &-item{
+            width:50px;
+            height:50px;
+            background-color:rgb(54, 54, 87);
+            margin:0 10px;
+            border-radius:5px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:2rem;
+        }
+    }
+    &__alphabet{
+        height:50%;
+        max-width:100%;
+        display:grid;
+        grid-template-columns:repeat(13,1fr);
+        align-items: center;
+        grid-template-rows:repeat(2,1fr);
+        grid-column-gap:5px;
+        &-btn{
+            height:50px;
+            width:50px;
+            background-color:rgb(54, 54, 87);
+            color:white;
+            border-radius:5px;
+            font-size:2rem;
+            border:none;
+            cursor:pointer;
+        }
+    }
+}

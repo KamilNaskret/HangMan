@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel='stylesheet' href="./dist/css/main.css">
+    <script src="./script/app.js" defer type="module"></script>
+</head>
+<body>
+    <div class="game">
+        <div class="game__results">
+            <div class="game__hangman">
+                <div class="hangman__bal" data-hangman></div>
+                <div class="hangman__head" data-hangman></div>
+                <div class="hangman__body" data-hangman></div>
+                <div class="hangman__leftarm" data-hangman></div>
+                <div class="hangman__rightarm" data-hangman></div>
+                <div class="hangman__leftleg" data-hangman></div>
+                <div class="hangman__rightleg" data-hangman></div>
+            </div>
+            <div class="game__missed">
+                <h2 class="game__missed-letters">
+                    You missed:<span data-missed></span>
+                </h2>
+                <div class="game__alphabet" data-alphabet>
+                </div>
+            </div>
+        </div>
+        <div class="game__letters" data-letters>
+            
+        </div>
+    </div>
+</body>
+</html>
