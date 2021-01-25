@@ -106,6 +106,7 @@
         }
     }
     &__letters{
+        position:relative;
         height:30vh;
         display:flex;
         align-items:center;
@@ -129,6 +130,7 @@
         display:grid;
         grid-template-columns:repeat(13,1fr);
         align-items: center;
+        justify-items:center;
         grid-template-rows:repeat(2,1fr);
         grid-column-gap:5px;
         &-btn{
