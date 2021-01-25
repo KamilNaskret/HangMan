@@ -1,6 +1,7 @@
 import {API_KEY} from "./config.mjs";
 class RandomWord{
-    constructor(){
+    constructor(API_KEY){
+        this.key=API_KEY
         this.randomWord=null;
         this.wordBoard=null;
         this.items=null;
@@ -12,7 +13,7 @@ class RandomWord{
         this.random();
     }
     random(){
-        fetch(`https://api.wordnik.com/v4/words.json/randomWord?api_key=${API_KEY}`)
+        fetch(`https://api.wordnik.com/v4/words.json/randomWord?api_key=${this.key}`)
             .then(response => response.json())
             .then(data => {
                 const {word}=data;

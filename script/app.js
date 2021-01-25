@@ -1,5 +1,6 @@
 import { Alphabet } from './alphabet.mjs';
 import { RandomWord } from './randomWord.mjs';
+import { API_KEY } from './config.mjs';
 
 
 class Hangman{
@@ -15,7 +16,7 @@ class Hangman{
     }
     initialize(){
         this.alphabet=new Alphabet();
-        this.word=new RandomWord();
+        this.word=new RandomWord(API_KEY);
         this.letters=[...document.querySelectorAll('.game__alphabet-btn')];
         this.missed=document.querySelector('[data-missed]');
         this.missed.innerHTML="";
