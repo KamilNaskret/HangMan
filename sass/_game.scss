@@ -74,7 +74,7 @@
         .hangman__leftleg{
             position:absolute;
             left:150px;
-            top:35%;
+            top:25%;
             width:10px;
             height:50px;
             background-color: rgb(74, 101, 206);;
@@ -84,7 +84,7 @@
         .hangman__rightleg{
             position:absolute;
             left:190px;
-            top:35%;
+            top:25%;
             width:10px;
             height:50px;
             background-color: rgb(74, 101, 206);;
@@ -110,6 +110,7 @@
         display:flex;
         align-items:center;
         justify-content:center;
+        z-index:1;
         &-item{
             width:50px;
             height:50px;
