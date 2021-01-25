@@ -1,3 +1,4 @@
+import {API_KEY} from "./config.mjs";
 class RandomWord{
     constructor(){
         this.randomWord=null;
@@ -11,15 +12,17 @@ class RandomWord{
         this.random();
     }
     random(){
-        fetch(`http://api.wordnik.com/v4/words.json/randomWord?api_key=${"ywhpmolo386bbhvsfha643fiond2nd3p2zct6dolqwb3dvccv"}`,{
-            contentType:'application/text',
-        })
+        fetch(`https://api.wordnik.com/v4/words.json/randomWord?api_key=${API_KEY}`)
             .then(response => response.json())
             .then(data => {
                 const {word}=data;
                 this.randomWord=word;
                 this.makeBoard();
             })
+            .catch(error => {
+                console.log(error)
+            })
+
     }
     makeBoard(){
         for(let i=0;i<this.randomWord.length;i++){

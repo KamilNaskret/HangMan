@@ -1,4 +1,4 @@
-import {Alphabet} from './alphabet.mjs';
+import { Alphabet } from './alphabet.mjs';
 import { RandomWord } from './randomWord.mjs';
 
 
@@ -39,7 +39,6 @@ class Hangman{
         let {randomWord:random,items} = this.word;
         this.wordStatus=[];
         random = random.toUpperCase();
-        console.log(random)
         for(let i=0;i<items.length;i++){
             this.wordStatus.push(items[i].innerHTML);
         }
@@ -57,7 +56,7 @@ class Hangman{
                 this.hangman[0].style.display="block";
                 this.hangman.shift();
             }else{
-                alert("Koniec gry! Przegrałeś");
+                alert(`Koniec gry! Przegrałeś, hasło : ${random}`);
                 this.initialize();
             }
         }
